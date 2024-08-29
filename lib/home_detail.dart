@@ -15,7 +15,7 @@ class HomeDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color:context.theme.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -35,7 +35,7 @@ class HomeDetailPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: mytheme.creamcolor,
+      backgroundColor: context.theme.canvasColor,
       body: SafeArea(
         bottom: false,
         child: Column(
@@ -50,7 +50,7 @@ class HomeDetailPage extends StatelessWidget {
               edge: VxEdge.top,
               arcType: VxArcType.convey,
               child: Container(
-                color: Colors.white,
+                color: context.theme.cardColor,
                 width: context.screenWidth,
                 child: Column(
                   children: [
@@ -58,9 +58,9 @@ class HomeDetailPage extends StatelessWidget {
                         .textStyle(context.captionStyle)
                         .bold
                         .xl3
-                        .color(mytheme.blueishcolor)
-                        .make(),
-                    catalog.desc.text.lg.color(mytheme.blueishcolor).make(),
+                        .color(Theme.of(context).textTheme.displayLarge?.color ?? mytheme.blueishcolor).make(),
+                        
+                    catalog.desc.text.lg.color(Theme.of(context).textTheme.displayLarge?.color ?? mytheme.blueishcolor).make(),
                     5.heightBox,
                     "Discover the latest in technology with top-tier gadgets like the iPhone, PS5, and wireless earbuds. Experience cutting-edge performance, sleek designs, and unparalleled functionality. Whether you're gaming, staying connected, or enjoying your favorite music."
                         .text.textStyle(context.captionStyle).size(13)

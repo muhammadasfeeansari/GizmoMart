@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:practice/utills/routes.dart';
+import 'package:practice/widgets/themes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -32,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color: context.theme.canvasColor,
       child: Container(
         // color: Color.fromARGB(255, 227, 237, 245),
         margin: EdgeInsets.only(top: 10),
@@ -45,16 +47,16 @@ class _LoginPageState extends State<LoginPage> {
                   "assets/images/hey.png",
                   fit: BoxFit.cover,
                 ),
-                // SizedBox(
-                //   height: 10.0,
-                // ),
+                SizedBox(
+                  height: 20.0,
+                ),
                 Text(
                   "Welcome $name",
                   style: TextStyle(
                       fontFamily: "Poppins",
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
-                      color: Colors.black),
+                      color:(Theme.of(context).textTheme.displayLarge?.color ?? mytheme.blueishcolor)),
                 ),
 
                 Padding(
@@ -124,7 +126,7 @@ class _LoginPageState extends State<LoginPage> {
                           height: 40.0,
                         ),
                         Material(
-                          color: Colors.purple,
+                          color: mytheme.blueishcolor,
                           borderRadius:
                               BorderRadius.circular(changebutton ? 50 : 8),
                           child: InkWell(

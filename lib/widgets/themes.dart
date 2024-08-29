@@ -37,7 +37,7 @@ class mytheme {
         appBarTheme: AppBarTheme(
           color: const Color.fromARGB(255, 134, 72, 72),
           elevation: 0.0,
-          iconTheme: IconThemeData(color: Colors.black),
+          iconTheme: IconThemeData(color: Colors.white),
         ),
         brightness: Brightness.dark,
       );
