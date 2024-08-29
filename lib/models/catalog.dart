@@ -1,8 +1,18 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
+
+
 class CatalogModel {
   static List<Item> items = []; 
+
+  // // Get Item By Id 
+
+  // Item getById(int id)=> items.firstWhere((element)=> element.id == id, orElse: null);
+
+  // // Get By Position
+
+  // Item getByPosition(int pos)=>items[pos];
 }
 
 

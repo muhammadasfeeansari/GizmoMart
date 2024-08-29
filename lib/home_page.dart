@@ -46,9 +46,12 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         backgroundColor: context.canvasColor,
         floatingActionButton: FloatingActionButton(
-          onPressed: () => Navigator.pushNamed(context,MyRoutes.CartPageRoute),
-            backgroundColor: mytheme.blueishcolor, 
-          child: Icon(Icons.shopping_cart, color: Colors.white,),
+          onPressed: () => Navigator.pushNamed(context, MyRoutes.CartPageRoute),
+          backgroundColor: mytheme.blueishcolor,
+          child: Icon(
+            Icons.shopping_cart,
+            color: Colors.white,
+          ),
         ),
         body: SafeArea(
           child: Container(

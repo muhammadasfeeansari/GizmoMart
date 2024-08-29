@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       darkTheme: mytheme.darktheme(context),
       debugShowCheckedModeBanner: false,
       title: 'learning flutter',
-      initialRoute: "/login",
+      initialRoute: "/home",
       routes: {
         MyRoutes.HomeRoute: (context) => HomePage(),
         MyRoutes.LoginRoute: (context) => LoginPage(),
