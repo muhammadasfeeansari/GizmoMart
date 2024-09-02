@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:practice/home_detail.dart';
-
 import 'package:practice/widgets/home_page_widget/catalog_image.dart';
 import 'package:practice/models/catalog.dart';
 import 'package:practice/widgets/themes.dart';
