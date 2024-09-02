@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practice/home_detail.dart';
+
 import 'package:practice/widgets/home_page_widget/catalog_image.dart';
 import 'package:practice/models/catalog.dart';
 import 'package:practice/widgets/themes.dart';
@@ -39,8 +40,9 @@ class CatalogItem extends StatelessWidget {
     return VxBox(
         child: Row(
       children: [
-        Hero(tag: Key(catalog.id.toString()),
-        child: CatalogImage(image: catalog.image)),
+        Hero(
+            tag: Key(catalog.id.toString()),
+            child: CatalogImage(image: catalog.image)),
         Expanded(
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -50,9 +52,13 @@ class CatalogItem extends StatelessWidget {
                 .textStyle(context.captionStyle)
                 .bold
                 .lg
-                .color(Theme.of(context).textTheme.displayLarge?.color ?? mytheme.blueishcolor)
+                .color(Theme.of(context).textTheme.displayLarge?.color ??
+                    mytheme.blueishcolor)
                 .make(),
-            catalog.desc.text.color(Theme.of(context).textTheme.displayLarge?.color ?? mytheme.blueishcolor).make(),
+            catalog.desc.text
+                .color(Theme.of(context).textTheme.displayLarge?.color ??
+                    mytheme.blueishcolor)
+                .make(),
             10.heightBox,
             ButtonBar(
               alignment: MainAxisAlignment.spaceBetween,
@@ -64,7 +70,9 @@ class CatalogItem extends StatelessWidget {
                       backgroundColor:
                           WidgetStateProperty.all(mytheme.blueishcolor),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      // Navigator.pushNamed(context, MyRoutes.CartPageRoute);
+                    },
                     child: "Add to cart".text.color(Colors.white).bold.make()),
               ],
             ).pOnly(right: 8.0)

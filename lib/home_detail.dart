@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:practice/utills/routes.dart';
 import 'package:practice/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -26,7 +27,9 @@ class HomeDetailPage extends StatelessWidget {
                       backgroundColor:
                           WidgetStateProperty.all(mytheme.blueishcolor),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, MyRoutes.CartPageRoute);
+                    },
                     child: "Add to cart".text.lg.color(Colors.white).bold.make())
                 .wh(130, 50),
           ],
