@@ -4,6 +4,13 @@ import 'dart:convert';
 
 
 class CatalogModel {
+static final CatalogModel _instance = CatalogModel._internal();
+
+  CatalogModel._internal();
+
+  factory CatalogModel() => _instance;
+
+
   static List<Item> items = []; 
 
   // Get Item By Id 

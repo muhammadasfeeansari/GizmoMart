@@ -1,9 +1,13 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:practice/home_detail.dart';
-import 'package:practice/widgets/home_page_widget/catalog_image.dart';
-import 'package:practice/models/catalog.dart';
-import 'package:practice/widgets/themes.dart';
+import 'package:practice/widgets/home_page_widget/addToCart.dart';
 import 'package:velocity_x/velocity_x.dart';
+
+import 'package:practice/home_detail.dart';
+import 'package:practice/models/cart.dart';
+import 'package:practice/models/catalog.dart';
+import 'package:practice/widgets/home_page_widget/catalog_image.dart';
+import 'package:practice/widgets/themes.dart';
 
 class CatalogList extends StatelessWidget {
   const CatalogList({super.key});
@@ -64,15 +68,7 @@ class CatalogItem extends StatelessWidget {
               buttonPadding: EdgeInsets.zero,
               children: [
                 "\$${catalog.price}".text.bold.xl.make(),
-                ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor:
-                          WidgetStateProperty.all(mytheme.blueishcolor),
-                    ),
-                    onPressed: () {
-                      // Navigator.pushNamed(context, MyRoutes.CartPageRoute);
-                    },
-                    child: "Add to cart".text.color(Colors.white).bold.make()),
+                AddToCart(catalog: catalog),
               ],
             ).pOnly(right: 8.0)
           ],
@@ -81,3 +77,5 @@ class CatalogItem extends StatelessWidget {
     )).color(context.theme.cardColor).rounded.square(150).make().py16();
   }
 }
+
+
