@@ -1,3 +1,5 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers, non_constant_identifier_names, unused_element
+
 import 'package:flutter/material.dart';
 import 'package:practice/models/cart.dart';
 import 'package:practice/widgets/themes.dart';
@@ -65,14 +67,7 @@ class _CartTotal extends StatelessWidget {
   }
 }
 
-class __CartLiState extends StatefulWidget {
-  const __CartLiState({super.key});
-
-  @override
-  State<__CartLiState> createState() => ___CartLiStateState();
-}
-
-class ___CartLiStateState extends State<__CartLiState> {
+class __CartLiState extends StatelessWidget{
   final _Cart = CartModel();
   @override
   Widget build(BuildContext context) {
@@ -86,7 +81,7 @@ class ___CartLiStateState extends State<__CartLiState> {
                 icon: Icon(Icons.remove_circle_outline),
                 onPressed: () {
                   _Cart.remove(_Cart.items[index]);
-                  setState(() {});
+                  // setState(() {});
                 },
               ),
               title: _Cart.items[index].name.text.make(),

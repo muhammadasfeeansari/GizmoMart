@@ -1,3 +1,5 @@
+// ignore_for_file: no_leading_underscores_for_local_identifiers, non_constant_identifier_names, duplicate_ignore
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:practice/models/cart.dart';
@@ -5,23 +7,20 @@ import 'package:practice/models/catalog.dart';
 import 'package:practice/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-class AddToCart extends StatefulWidget {
+class AddToCart extends StatelessWidget {
   final Item catalog;
-  const AddToCart({
+   AddToCart({
     Key? key,
     required this.catalog,
   }) : super(key: key);
 
-  @override
-  State<AddToCart> createState() => _AddToCartState();
-}
-
-class _AddToCartState extends State<AddToCart> {
+ 
+  // ignore: non_constant_identifier_names
   final _Cart = CartModel();
  
   @override
   Widget build(BuildContext context) {
-    bool isInCart = _Cart.items.contains(widget.catalog) ?? false;
+    bool isInCart = _Cart.items.contains(catalog) ?? false;
     return ElevatedButton(
         style: ButtonStyle(
           backgroundColor: WidgetStateProperty.all(mytheme.blueishcolor),
@@ -33,8 +32,8 @@ class _AddToCartState extends State<AddToCart> {
           final _Catalog = CatalogModel();
           
           _Cart.catalog = _Catalog;
-          _Cart.add(widget.catalog);
-          setState(() {});
+          _Cart.add(catalog);
+          // setState(() {});
           }
         },
         child: isInCart

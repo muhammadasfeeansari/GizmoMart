@@ -1,14 +1,10 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+// ignore_for_file: public_member_api_docs, sort_constructors_first, null_closures
 import 'dart:convert';
 
 
 
 class CatalogModel {
-static final CatalogModel _instance = CatalogModel._internal();
 
-  CatalogModel._internal();
-
-  factory CatalogModel() => _instance;
 
 
   static List<Item> items = []; 

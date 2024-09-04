@@ -1,12 +1,10 @@
 
+// ignore_for_file: unnecessary_getters_setters
+
 import 'package:practice/models/catalog.dart';
 
 class CartModel {
-static final CartModel _instance = CartModel._internal();
 
-  CartModel._internal();
-
-  factory CartModel() => _instance;
 
 
   late CatalogModel _catalog;
