@@ -27,7 +27,13 @@ class AddToCart extends StatelessWidget {
             backgroundColor: WidgetStateProperty.all(mytheme.blueishcolor),
           ),
           onPressed: () {
+           
             if (!isInCart) {
+               ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: "Product Added In The Cart".text.color(Colors.white).xl.bold.make(),
+                  backgroundColor: Colors.redAccent[700],
+                ));
               AddMutation(catalog);
             }
           },
