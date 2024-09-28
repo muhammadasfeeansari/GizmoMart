@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "749711859851",
+    "project_id": "gizmomart-3200a",
+    "storage_bucket": "gizmomart-3200a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749711859851:android:9b6934185654b93f2a748e",
+        "android_client_info": {
+          "package_name": "com.example.practice"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcLaayCswKw_XkEi5KXpsUbTD5XKhtPVk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
