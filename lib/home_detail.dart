@@ -48,21 +48,23 @@ class HomeDetailPage extends StatelessWidget {
               child: Container(
                 color: context.theme.cardColor,
                 width: context.screenWidth,
-                child: Column(
-                  children: [
-                    catalog.name.text
-                        .textStyle(context.captionStyle)
-                        .bold
-                        .xl3
-                        .color(Theme.of(context).textTheme.displayLarge?.color ?? mytheme.blueishcolor).make(),
-                        
-                    catalog.desc.text.lg.color(Theme.of(context).textTheme.displayLarge?.color ?? mytheme.blueishcolor).make(),
-                    5.heightBox,
-                    "Discover the latest in technology with top-tier gadgets like the iPhone, PS5, and wireless earbuds. Experience cutting-edge performance, sleek designs, and unparalleled functionality. Whether you're gaming, staying connected, or enjoying your favorite music."
-                        .text.textStyle(context.captionStyle).size(13)
-                        .make().pOnly(left: 16,right: 16).py12()
-                  ],
-                ).py64(),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      catalog.name.text
+                          .textStyle(context.captionStyle)
+                          .bold
+                          .xl3
+                          .color(Theme.of(context).textTheme.displayLarge?.color ?? mytheme.blueishcolor).make(),
+                          
+                      catalog.desc.text.lg.color(Theme.of(context).textTheme.displayLarge?.color ?? mytheme.blueishcolor).make(),
+                      5.heightBox,
+                      "Discover the latest in technology with top-tier gadgets like the iPhone, PS5, and wireless earbuds. Experience cutting-edge performance, sleek designs, and unparalleled functionality. Whether you're gaming, staying connected, or enjoying your favorite music."
+                          .text.textStyle(context.captionStyle).size(13)
+                          .make().pOnly(left: 16,right: 16).py12()
+                    ],
+                  ).py64(),
+                ),
               ),
             ))
           ],

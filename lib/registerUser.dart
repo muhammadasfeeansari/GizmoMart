@@ -52,7 +52,7 @@ class _RegisteruserState extends State<Registeruser> {
           const SnackBar(
             content: Text(
               "Sign Up Successfully",
-              style: TextStyle(color: Colors.white, fontSize: 15),
+              style: TextStyle(color: Colors.red, fontSize: 15),
             ),
           ),
         );
